@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Container,
   Typography,
@@ -33,8 +34,11 @@ import { RJSFSchema } from '@rjsf/utils';
 import { JSONSchema7 } from 'json-schema';
 import { RBACGuard, RBACDebugInfo } from '../RBAC/RBACGuard';
 import { useRBACPermissions, useFormFieldPermissions, useWorkflowPermissions } from '../../hooks/useRBACHooks';
+import { AppDispatch } from '../../store';
+import { fetchSimpleDemoPermissions } from '../../store/slices/rbacSlice';
 
 const DemoPage: React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const {
     currentUserRoleId,
     currentRole,
@@ -100,7 +104,12 @@ const DemoPage: React.FC = () => {
   const uiSchema = transformFormSchema(formSchema, baseUISchema, '/demo/form');
 
   const handleRoleChange = (roleId: number) => {
+    // Update current role in state
     changeUserRole(roleId);
+    // In demo mode, also fetch the permission matrix for the selected role
+    if (process.env.REACT_APP_RBAC_SIMPLE_DEMO === 'true') {
+      dispatch(fetchSimpleDemoPermissions(roleId));
+    }
   };
 
   const handleWorkflowChange = (stage: string) => {
@@ -379,7 +388,6 @@ const DemoPage: React.FC = () => {
                 formData={formData}
                 validator={validator}
                 onSubmit={handleFormSubmit}
-                disabled={!checkEnabled('/demo/form', 'UPDATE')}
               >
                 <Box sx={{ mt: 2, display: 'flex', gap: 2 }}>
                   <RBACGuard

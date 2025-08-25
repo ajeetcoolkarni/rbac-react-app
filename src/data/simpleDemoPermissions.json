@@ -457,7 +457,21 @@
       {"PermissionId": 2028, "RoleId": 2, "ResourceId": 304, "ActionId": 1, "IsActive": true},
       {"PermissionId": 2029, "RoleId": 2, "ResourceId": 304, "ActionId": 2, "IsActive": true},
       {"PermissionId": 2030, "RoleId": 2, "ResourceId": 307, "ActionId": 1, "IsActive": true},
-      {"PermissionId": 2031, "RoleId": 2, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+      {"PermissionId": 2031, "RoleId": 2, "ResourceId": 307, "ActionId": 3, "IsActive": true},
+
+      {"PermissionId": 2100, "RoleId": 2, "ResourceId": 1,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2101, "RoleId": 2, "ResourceId": 10, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2102, "RoleId": 2, "ResourceId": 11, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2103, "RoleId": 2, "ResourceId": 12, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2104, "RoleId": 2, "ResourceId": 15, "ActionId": 6, "IsActive": true},
+
+      {"PermissionId": 2105, "RoleId": 2, "ResourceId": 16, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2106, "RoleId": 2, "ResourceId": 17, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2107, "RoleId": 2, "ResourceId": 18, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2108, "RoleId": 2, "ResourceId": 19, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2109, "RoleId": 2, "ResourceId": 19, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2110, "RoleId": 2, "ResourceId": 21, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2111, "RoleId": 2, "ResourceId": 23, "ActionId": 2, "IsActive": true}
     ],
     "3": [
       {"PermissionId": 3001, "RoleId": 3, "ResourceId": 100, "ActionId": 1, "IsActive": true},
@@ -496,6 +510,20 @@
       {"PermissionId": 3032, "RoleId": 3, "ResourceId": 306, "ActionId": 1, "IsActive": true},
       {"PermissionId": 3033, "RoleId": 3, "ResourceId": 306, "ActionId": 2, "IsActive": true},
       {"PermissionId": 3034, "RoleId": 3, "ResourceId": 307, "ActionId": 1, "IsActive": true}
+    
+    ,
+      {"PermissionId": 3100, "RoleId": 3, "ResourceId": 1,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3101, "RoleId": 3, "ResourceId": 16, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3102, "RoleId": 3, "ResourceId": 16, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3103, "RoleId": 3, "ResourceId": 17, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3104, "RoleId": 3, "ResourceId": 17, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3105, "RoleId": 3, "ResourceId": 18, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3106, "RoleId": 3, "ResourceId": 18, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3107, "RoleId": 3, "ResourceId": 19, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3108, "RoleId": 3, "ResourceId": 19, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3109, "RoleId": 3, "ResourceId": 21, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3110, "RoleId": 3, "ResourceId": 21, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3111, "RoleId": 3, "ResourceId": 23, "ActionId": 2, "IsActive": true}
     ],
     "4": [
       {"PermissionId": 4001, "RoleId": 4, "ResourceId": 100, "ActionId": 1, "IsActive": true},
@@ -525,7 +553,11 @@
       {"PermissionId": 4023, "RoleId": 4, "ResourceId": 305, "ActionId": 1, "IsActive": true},
       {"PermissionId": 4024, "RoleId": 4, "ResourceId": 306, "ActionId": 1, "IsActive": true},
       {"PermissionId": 4025, "RoleId": 4, "ResourceId": 307, "ActionId": 1, "IsActive": true},
-      {"PermissionId": 4026, "RoleId": 4, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+      {"PermissionId": 4026, "RoleId": 4, "ResourceId": 307, "ActionId": 3, "IsActive": true},
+
+      {"PermissionId": 4100, "RoleId": 4, "ResourceId": 1,  "ActionId": 1, "IsActive": true},  
+      {"PermissionId": 4101, "RoleId": 4, "ResourceId": 16, "ActionId": 1, "IsActive": true},  
+      {"PermissionId": 4102, "RoleId": 4, "ResourceId": 17, "ActionId": 1, "IsActive": true}
     ],
     "5": [
       {"PermissionId": 5001, "RoleId": 5, "ResourceId": 100, "ActionId": 1, "IsActive": false},

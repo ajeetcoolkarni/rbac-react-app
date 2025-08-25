@@ -91,7 +91,7 @@ const initialState: RBACState = {
   permissionMatrix: [],
   userPermissions: [],
   currentUserRoleId: undefined,
-  workflowStage: undefined,
+  workflowStage: 'draft',
   isLoading: false,
   error: undefined,
 };
