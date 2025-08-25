@@ -35,6 +35,134 @@
       "HierarchyLevel": 1
     },
     {
+      "ResourceId": 10,
+      "ResourcePath": "/demo/stats",
+      "ResourceName": "Statistics Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 11,
+      "ResourcePath": "/demo/stats/revenue",
+      "ResourceName": "Revenue Chip",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 10
+    },
+    {
+      "ResourceId": 12,
+      "ResourcePath": "/demo/stats/users",
+      "ResourceName": "Users Chip",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 10
+    },
+    {
+      "ResourceId": 13,
+      "ResourcePath": "/demo/actions/create",
+      "ResourceName": "Create Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 14,
+      "ResourcePath": "/demo/actions/delete",
+      "ResourceName": "Delete Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 15,
+      "ResourcePath": "/demo/actions/approve",
+      "ResourceName": "Approve Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 16,
+      "ResourcePath": "/demo/form",
+      "ResourceName": "Demo Form Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 17,
+      "ResourcePath": "/demo/form/name",
+      "ResourceName": "Name Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 18,
+      "ResourcePath": "/demo/form/email",
+      "ResourceName": "Email Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 19,
+      "ResourcePath": "/demo/form/department",
+      "ResourceName": "Department Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 21,
+      "ResourcePath": "/demo/form/salary",
+      "ResourceName": "Salary Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 22,
+      "ResourcePath": "/demo/form/submit",
+      "ResourceName": "Submit Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 23,
+      "ResourcePath": "/demo/form/reset",
+      "ResourceName": "Reset Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 16
+    },
+    {
+      "ResourceId": 24,
+      "ResourcePath": "/demo/restricted-section",
+      "ResourceName": "Restricted Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 1
+    },
+    {
+      "ResourceId": 25,
+      "ResourcePath": "/demo/restricted-section/field1",
+      "ResourceName": "Restricted Field 1",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 24
+    },
+    {
+      "ResourceId": 26,
+      "ResourcePath": "/demo/restricted-section/field2",
+      "ResourceName": "Restricted Field 2",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 24
+    },
+    {
       "ResourceId": 100,
       "ResourcePath": "/simple-demo-1",
       "ResourceName": "Simple Demo Page 1 (All RJSF)",
@@ -207,6 +335,21 @@
       "ActionId": 3,
       "Action": "SUBMIT",
       "Description": "Submit forms"
+    },
+    {
+      "ActionId": 4,
+      "Action": "DELETE",
+      "Description": "Delete items"
+    },
+    {
+      "ActionId": 5,
+      "Action": "CREATE",
+      "Description": "Create items"
+    },
+    {
+      "ActionId": 6,
+      "Action": "APPROVE",
+      "Description": "Approve items or requests"
     }
   ],
   "permissionMatrix": {
@@ -253,7 +396,33 @@
       {"PermissionId": 1037, "RoleId": 1, "ResourceId": 306, "ActionId": 1, "IsActive": true},
       {"PermissionId": 1038, "RoleId": 1, "ResourceId": 306, "ActionId": 2, "IsActive": true},
       {"PermissionId": 1039, "RoleId": 1, "ResourceId": 307, "ActionId": 1, "IsActive": true},
-      {"PermissionId": 1040, "RoleId": 1, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+      {"PermissionId": 1040, "RoleId": 1, "ResourceId": 307, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 1041, "RoleId": 1, "ResourceId": 10,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1042, "RoleId": 1, "ResourceId": 11,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1043, "RoleId": 1, "ResourceId": 12,  "ActionId": 1, "IsActive": true},
+      
+      {"PermissionId": 1044, "RoleId": 1, "ResourceId": 13,  "ActionId": 5, "IsActive": true},
+      {"PermissionId": 1045, "RoleId": 1, "ResourceId": 14,  "ActionId": 4, "IsActive": true},
+      {"PermissionId": 1046, "RoleId": 1, "ResourceId": 15,  "ActionId": 6, "IsActive": true, "Metadata": "{\"workflowRestrictions\":{\"draft\":{\"allowedActions\":[\"READ\"]},\"submitted\":{\"allowedActions\":[\"READ\",\"APPROVE\"]},\"approved\":{\"allowedActions\":[\"READ\"]},\"completed\":{\"allowedActions\":[\"READ\"]}}}"},
+      
+      {"PermissionId": 1047, "RoleId": 1, "ResourceId": 16,  "ActionId": 1, "IsActive": true, "Metadata": "{\"workflowRestrictions\":{\"draft\":{\"allowedActions\":[\"READ\",\"UPDATE\",\"SUBMIT\"]},\"submitted\":{\"allowedActions\":[\"READ\",\"UPDATE\",\"APPROVE\"]},\"approved\":{\"allowedActions\":[\"READ\"]},\"completed\":{\"allowedActions\":[\"READ\"]}}}"},
+      {"PermissionId": 1048, "RoleId": 1, "ResourceId": 16,  "ActionId": 2, "IsActive": true, "Metadata": "{\"workflowRestrictions\":{\"draft\":{\"allowedActions\":[\"READ\",\"UPDATE\",\"SUBMIT\"]},\"submitted\":{\"allowedActions\":[\"READ\",\"UPDATE\",\"APPROVE\"]},\"approved\":{\"allowedActions\":[\"READ\"]},\"completed\":{\"allowedActions\":[\"READ\"]}}}"},
+      {"PermissionId": 1049, "RoleId": 1, "ResourceId": 17,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1050, "RoleId": 1, "ResourceId": 17,  "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1051, "RoleId": 1, "ResourceId": 18,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1052, "RoleId": 1, "ResourceId": 18,  "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1053, "RoleId": 1, "ResourceId": 19,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1054, "RoleId": 1, "ResourceId": 19,  "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1055, "RoleId": 1, "ResourceId": 21,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1056, "RoleId": 1, "ResourceId": 21,  "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1057, "RoleId": 1, "ResourceId": 22,  "ActionId": 3, "IsActive": true, "Metadata": "{\"workflowRestrictions\":{\"draft\":{\"allowedActions\":[\"SUBMIT\"]},\"submitted\":{\"allowedActions\":[\"SUBMIT\"]},\"approved\":{\"restrictedActions\":[\"SUBMIT\"]},\"completed\":{\"restrictedActions\":[\"SUBMIT\"]}}}"},
+      {"PermissionId": 1058, "RoleId": 1, "ResourceId": 23,  "ActionId": 2, "IsActive": true, "Metadata": "{\"workflowRestrictions\":{\"draft\":{\"allowedActions\":[\"UPDATE\"]},\"submitted\":{\"allowedActions\":[\"UPDATE\"]},\"approved\":{\"restrictedActions\":[\"UPDATE\"]},\"completed\":{\"restrictedActions\":[\"UPDATE\"]}}}"},
+      
+      {"PermissionId": 1059, "RoleId": 1, "ResourceId": 24,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1060, "RoleId": 1, "ResourceId": 24,  "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1061, "RoleId": 1, "ResourceId": 25,  "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1062, "RoleId": 1, "ResourceId": 26,  "ActionId": 1, "IsActive": true}
     ],
     "2": [
       {"PermissionId": 2001, "RoleId": 2, "ResourceId": 100, "ActionId": 1, "IsActive": true},
