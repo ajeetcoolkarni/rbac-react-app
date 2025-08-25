@@ -140,6 +140,38 @@ function ProtectedRoute() {
 - `useWorkflowPermissions()` helps query allowed actions per workflow stage and move between stages.
 - `hasPermission` accepts an explicit `workflowStage` or uses the one from Redux state.
 
+### Workflow Restrictions Metadata
+
+You can attach workflow-aware rules to a permission via the `PermissionMatrix.Metadata` JSON (stored as a string). The slice parses it in `transformToUserPermissions()` and `hasPermission()` enforces it.
+
+- Path: `metadata.workflowRestrictions[stage]`
+- Keys per stage:
+  - `allowedActions: string[]` -> when present, only actions in this list are allowed for that stage.
+  - `restrictedActions: string[]` -> actions explicitly denied for that stage.
+- Precedence: If both are provided for a stage, `restrictedActions` takes priority for listed actions; otherwise `allowedActions` gates access. Then normal exact/override/hierarchy rules apply.
+
+Example snippet attached to a permission row (as string in `PermissionMatrix.Metadata`):
+
+```json
+{
+  "workflowRestrictions": {
+    "draft": { "allowedActions": ["READ", "UPDATE", "SUBMIT"] },
+    "submitted": { "allowedActions": ["READ", "UPDATE", "APPROVE"] },
+    "approved": { "allowedActions": ["READ"] },
+    "completed": { "allowedActions": ["READ"] }
+  }
+}
+```
+
+How it’s applied in code:
+
+- In `rbacSlice.transformToUserPermissions()`: metadata is parsed from the first valid permission row for a resource and attached to the `UserPermission` for that `resourcePath`.
+- In `rbacUtils.hasPermission()`:
+  - For the current `workflowStage`, read `metadata.workflowRestrictions[stage]`.
+  - Deny if `restrictedActions` includes `action`.
+  - If `allowedActions` exists and does not include `action`, deny.
+  - Otherwise, fall back to standard checks (exact/override/parent).
+
 ## Resource Hierarchy
 
 - Store `resources` as a flat list in Redux. Hierarchy is derived by `ParentResourceId` only where needed for navigation trees.
