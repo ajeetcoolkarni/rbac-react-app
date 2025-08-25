@@ -1,0 +1,367 @@
+{
+  "roles": [
+    {
+      "RoleId": 1,
+      "RoleName": "Admin",
+      "Description": "Full access administrator"
+    },
+    {
+      "RoleId": 2,
+      "RoleName": "Manager",
+      "Description": "Limited section access"
+    },
+    {
+      "RoleId": 3,
+      "RoleName": "Editor",
+      "Description": "Can edit but cannot submit"
+    },
+    {
+      "RoleId": 4,
+      "RoleName": "Viewer",
+      "Description": "Only one field access"
+    },
+    {
+      "RoleId": 5,
+      "RoleName": "Restricted",
+      "Description": "Entire page disabled"
+    }
+  ],
+  "resources": [
+    {
+      "ResourceId": 1,
+      "ResourcePath": "/demo",
+      "ResourceName": "Main Demo Page",
+      "ResourceType": "PAGE",
+      "HierarchyLevel": 1
+    },
+    {
+      "ResourceId": 100,
+      "ResourcePath": "/simple-demo-1",
+      "ResourceName": "Simple Demo Page 1 (All RJSF)",
+      "ResourceType": "PAGE",
+      "HierarchyLevel": 1
+    },
+    {
+      "ResourceId": 101,
+      "ResourcePath": "/simple-demo-1/form",
+      "ResourceName": "Demo Form Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 100
+    },
+    {
+      "ResourceId": 102,
+      "ResourcePath": "/simple-demo-1/form/name",
+      "ResourceName": "Name Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 101
+    },
+    {
+      "ResourceId": 103,
+      "ResourcePath": "/simple-demo-1/form/email",
+      "ResourceName": "Email Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 101
+    },
+    {
+      "ResourceId": 104,
+      "ResourcePath": "/simple-demo-1/form/phone",
+      "ResourceName": "Phone Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 101
+    },
+    {
+      "ResourceId": 105,
+      "ResourcePath": "/simple-demo-1/form/submit",
+      "ResourceName": "Submit Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 101
+    },
+    {
+      "ResourceId": 200,
+      "ResourcePath": "/simple-demo-2",
+      "ResourceName": "Simple Demo Page 2 (No RJSF)",
+      "ResourceType": "PAGE",
+      "HierarchyLevel": 1
+    },
+    {
+      "ResourceId": 201,
+      "ResourcePath": "/simple-demo-2/form",
+      "ResourceName": "Demo Form Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 200
+    },
+    {
+      "ResourceId": 202,
+      "ResourcePath": "/simple-demo-2/form/name",
+      "ResourceName": "Name Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 201
+    },
+    {
+      "ResourceId": 203,
+      "ResourcePath": "/simple-demo-2/form/email",
+      "ResourceName": "Email Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 201
+    },
+    {
+      "ResourceId": 204,
+      "ResourcePath": "/simple-demo-2/form/phone",
+      "ResourceName": "Phone Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 201
+    },
+    {
+      "ResourceId": 205,
+      "ResourcePath": "/simple-demo-2/form/submit",
+      "ResourceName": "Submit Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 201
+    },
+    {
+      "ResourceId": 300,
+      "ResourcePath": "/simple-demo-3",
+      "ResourceName": "Simple Demo Page 3 (Partial RJSF)",
+      "ResourceType": "PAGE",
+      "HierarchyLevel": 1
+    },
+    {
+      "ResourceId": 301,
+      "ResourcePath": "/simple-demo-3/rjsf-section",
+      "ResourceName": "RJSF Form Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 300
+    },
+    {
+      "ResourceId": 302,
+      "ResourcePath": "/simple-demo-3/manual-section",
+      "ResourceName": "Manual Form Section",
+      "ResourceType": "SECTION",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 300
+    },
+    {
+      "ResourceId": 303,
+      "ResourcePath": "/simple-demo-3/rjsf-section/name",
+      "ResourceName": "RJSF Name Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 301
+    },
+    {
+      "ResourceId": 304,
+      "ResourcePath": "/simple-demo-3/rjsf-section/email",
+      "ResourceName": "RJSF Email Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 301
+    },
+    {
+      "ResourceId": 305,
+      "ResourcePath": "/simple-demo-3/manual-section/phone",
+      "ResourceName": "Manual Phone Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 302
+    },
+    {
+      "ResourceId": 306,
+      "ResourcePath": "/simple-demo-3/manual-section/address",
+      "ResourceName": "Manual Address Field",
+      "ResourceType": "FIELD",
+      "HierarchyLevel": 3,
+      "ParentResourceId": 302
+    },
+    {
+      "ResourceId": 307,
+      "ResourcePath": "/simple-demo-3/submit",
+      "ResourceName": "Submit Button",
+      "ResourceType": "BUTTON",
+      "HierarchyLevel": 2,
+      "ParentResourceId": 300
+    }
+  ],
+  "actions": [
+    {
+      "ActionId": 1,
+      "Action": "READ",
+      "Description": "View/Read access"
+    },
+    {
+      "ActionId": 2,
+      "Action": "UPDATE",
+      "Description": "Modify existing items"
+    },
+    {
+      "ActionId": 3,
+      "Action": "SUBMIT",
+      "Description": "Submit forms"
+    }
+  ],
+  "permissionMatrix": {
+    "1": [
+      {"PermissionId": 1000, "RoleId": 1, "ResourceId": 1, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1001, "RoleId": 1, "ResourceId": 100, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1002, "RoleId": 1, "ResourceId": 100, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1003, "RoleId": 1, "ResourceId": 101, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1004, "RoleId": 1, "ResourceId": 101, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1005, "RoleId": 1, "ResourceId": 102, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1006, "RoleId": 1, "ResourceId": 102, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1007, "RoleId": 1, "ResourceId": 103, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1008, "RoleId": 1, "ResourceId": 103, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1009, "RoleId": 1, "ResourceId": 104, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1010, "RoleId": 1, "ResourceId": 104, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1011, "RoleId": 1, "ResourceId": 105, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1012, "RoleId": 1, "ResourceId": 105, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 1013, "RoleId": 1, "ResourceId": 200, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1014, "RoleId": 1, "ResourceId": 200, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1015, "RoleId": 1, "ResourceId": 201, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1016, "RoleId": 1, "ResourceId": 201, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1017, "RoleId": 1, "ResourceId": 202, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1018, "RoleId": 1, "ResourceId": 202, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1019, "RoleId": 1, "ResourceId": 203, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1020, "RoleId": 1, "ResourceId": 203, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1021, "RoleId": 1, "ResourceId": 204, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1022, "RoleId": 1, "ResourceId": 204, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1023, "RoleId": 1, "ResourceId": 205, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1024, "RoleId": 1, "ResourceId": 205, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 1025, "RoleId": 1, "ResourceId": 300, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1026, "RoleId": 1, "ResourceId": 300, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1027, "RoleId": 1, "ResourceId": 301, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1028, "RoleId": 1, "ResourceId": 301, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1029, "RoleId": 1, "ResourceId": 302, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1030, "RoleId": 1, "ResourceId": 302, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1031, "RoleId": 1, "ResourceId": 303, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1032, "RoleId": 1, "ResourceId": 303, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1033, "RoleId": 1, "ResourceId": 304, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1034, "RoleId": 1, "ResourceId": 304, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1035, "RoleId": 1, "ResourceId": 305, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1036, "RoleId": 1, "ResourceId": 305, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1037, "RoleId": 1, "ResourceId": 306, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1038, "RoleId": 1, "ResourceId": 306, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 1039, "RoleId": 1, "ResourceId": 307, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 1040, "RoleId": 1, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+    ],
+    "2": [
+      {"PermissionId": 2001, "RoleId": 2, "ResourceId": 100, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2002, "RoleId": 2, "ResourceId": 101, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2003, "RoleId": 2, "ResourceId": 101, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2004, "RoleId": 2, "ResourceId": 102, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2005, "RoleId": 2, "ResourceId": 102, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2006, "RoleId": 2, "ResourceId": 103, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2007, "RoleId": 2, "ResourceId": 103, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2008, "RoleId": 2, "ResourceId": 104, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2009, "RoleId": 2, "ResourceId": 104, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2010, "RoleId": 2, "ResourceId": 105, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2011, "RoleId": 2, "ResourceId": 105, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 2012, "RoleId": 2, "ResourceId": 200, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2013, "RoleId": 2, "ResourceId": 201, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2014, "RoleId": 2, "ResourceId": 201, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2015, "RoleId": 2, "ResourceId": 202, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2016, "RoleId": 2, "ResourceId": 202, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2017, "RoleId": 2, "ResourceId": 203, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2018, "RoleId": 2, "ResourceId": 203, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2019, "RoleId": 2, "ResourceId": 204, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2020, "RoleId": 2, "ResourceId": 204, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2021, "RoleId": 2, "ResourceId": 205, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2022, "RoleId": 2, "ResourceId": 205, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 2023, "RoleId": 2, "ResourceId": 300, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2024, "RoleId": 2, "ResourceId": 301, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2025, "RoleId": 2, "ResourceId": 301, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2026, "RoleId": 2, "ResourceId": 303, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2027, "RoleId": 2, "ResourceId": 303, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2028, "RoleId": 2, "ResourceId": 304, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2029, "RoleId": 2, "ResourceId": 304, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 2030, "RoleId": 2, "ResourceId": 307, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 2031, "RoleId": 2, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+    ],
+    "3": [
+      {"PermissionId": 3001, "RoleId": 3, "ResourceId": 100, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3002, "RoleId": 3, "ResourceId": 101, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3003, "RoleId": 3, "ResourceId": 101, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3004, "RoleId": 3, "ResourceId": 102, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3005, "RoleId": 3, "ResourceId": 102, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3006, "RoleId": 3, "ResourceId": 103, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3007, "RoleId": 3, "ResourceId": 103, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3008, "RoleId": 3, "ResourceId": 104, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3009, "RoleId": 3, "ResourceId": 104, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3010, "RoleId": 3, "ResourceId": 105, "ActionId": 1, "IsActive": true},
+      
+      {"PermissionId": 3011, "RoleId": 3, "ResourceId": 200, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3012, "RoleId": 3, "ResourceId": 201, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3013, "RoleId": 3, "ResourceId": 201, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3014, "RoleId": 3, "ResourceId": 202, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3015, "RoleId": 3, "ResourceId": 202, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3016, "RoleId": 3, "ResourceId": 203, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3017, "RoleId": 3, "ResourceId": 203, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3018, "RoleId": 3, "ResourceId": 204, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3019, "RoleId": 3, "ResourceId": 204, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3020, "RoleId": 3, "ResourceId": 205, "ActionId": 1, "IsActive": true},
+      
+      {"PermissionId": 3021, "RoleId": 3, "ResourceId": 300, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3022, "RoleId": 3, "ResourceId": 301, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3023, "RoleId": 3, "ResourceId": 301, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3024, "RoleId": 3, "ResourceId": 302, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3025, "RoleId": 3, "ResourceId": 302, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3026, "RoleId": 3, "ResourceId": 303, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3027, "RoleId": 3, "ResourceId": 303, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3028, "RoleId": 3, "ResourceId": 304, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3029, "RoleId": 3, "ResourceId": 304, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3030, "RoleId": 3, "ResourceId": 305, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3031, "RoleId": 3, "ResourceId": 305, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3032, "RoleId": 3, "ResourceId": 306, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 3033, "RoleId": 3, "ResourceId": 306, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 3034, "RoleId": 3, "ResourceId": 307, "ActionId": 1, "IsActive": true}
+    ],
+    "4": [
+      {"PermissionId": 4001, "RoleId": 4, "ResourceId": 100, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4002, "RoleId": 4, "ResourceId": 101, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4003, "RoleId": 4, "ResourceId": 102, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4004, "RoleId": 4, "ResourceId": 102, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 4005, "RoleId": 4, "ResourceId": 103, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4006, "RoleId": 4, "ResourceId": 104, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4007, "RoleId": 4, "ResourceId": 105, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4008, "RoleId": 4, "ResourceId": 105, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 4009, "RoleId": 4, "ResourceId": 200, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4010, "RoleId": 4, "ResourceId": 201, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4011, "RoleId": 4, "ResourceId": 202, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4012, "RoleId": 4, "ResourceId": 202, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 4013, "RoleId": 4, "ResourceId": 203, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4014, "RoleId": 4, "ResourceId": 204, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4015, "RoleId": 4, "ResourceId": 205, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4016, "RoleId": 4, "ResourceId": 205, "ActionId": 3, "IsActive": true},
+      
+      {"PermissionId": 4017, "RoleId": 4, "ResourceId": 300, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4018, "RoleId": 4, "ResourceId": 301, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4019, "RoleId": 4, "ResourceId": 302, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4020, "RoleId": 4, "ResourceId": 303, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4021, "RoleId": 4, "ResourceId": 303, "ActionId": 2, "IsActive": true},
+      {"PermissionId": 4022, "RoleId": 4, "ResourceId": 304, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4023, "RoleId": 4, "ResourceId": 305, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4024, "RoleId": 4, "ResourceId": 306, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4025, "RoleId": 4, "ResourceId": 307, "ActionId": 1, "IsActive": true},
+      {"PermissionId": 4026, "RoleId": 4, "ResourceId": 307, "ActionId": 3, "IsActive": true}
+    ],
+    "5": [
+      {"PermissionId": 5001, "RoleId": 5, "ResourceId": 100, "ActionId": 1, "IsActive": false},
+      {"PermissionId": 5002, "RoleId": 5, "ResourceId": 200, "ActionId": 1, "IsActive": false},
+      {"PermissionId": 5003, "RoleId": 5, "ResourceId": 300, "ActionId": 1, "IsActive": false}
+    ]
+  }
+}
